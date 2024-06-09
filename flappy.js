@@ -77,11 +77,12 @@ function pillarGenerate() {
     }
 
 // jump logic
-addEventListener("keypress", (event) => {
+addEventListener("keydown", (event) => {
         let birdPos=parseFloat(window.getComputedStyle(bird).bottom);
         // console.log(birdPos);
-    
-        if (event.key == " ") {
+        console.log(event.code);
+
+        if (event.key == " " || event.key=="ArrowUp") {
             bird.style.bottom = `${birdPos+40}px`;
             
             
